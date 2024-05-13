@@ -1,0 +1,15 @@
+include DataIncludes/vars
+//- string interpolation "Escaped"
+h1.brandName #{BrandName.toUpperCase()}
+h1 #{tagBold}
+
+//- string interpolation Unescaped
+div.Unescaped
+  h1 !{tagBold}
+  //- to pring cearly practices
+  h2 \!{tagBold}
+
+//- tag interpolation
+
+div
+  h1 hello pro this is #[b(class="hello_pro") pugjs] can you learn this

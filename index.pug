@@ -1,15 +1,24 @@
+include DataIncludes/vars
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
-  body(class="dark")
-    header.navgationBar
-      h2(class="brand_name text-2xl text-red-900")
-      nav#links
-        a(href="./anything", class="link underline-none", id="active") home
-        a(href="./anything", class="link underline-none", id="active") skills
-        a(href="./anything", class="link underline-none", id="active") serv
-        a(href="./anything", class="link underline-none", id="active") contact
-    main.page_content
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    include DataIncludes/styles
+    block pageTitle
+      title #{BrandName}
+  block pagecontent
+    body(class="dark")
+    include DataIncludes/nav
+    include code and js code
+    include loop
+    include each
+    include interpolation
+    include mixins
+    +skills
+    +names
+    +programming_lang('hello programming langu')
+
+    block footer
+      main hello pro in footer info
+    include cases
